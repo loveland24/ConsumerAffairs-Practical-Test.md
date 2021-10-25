@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  theeye:
+    container_name: the-eye
+    build: .
+    command: ["./start_files/django-local.sh"]
+    volumes:
+      - ./theeye:/code
+      - ./theeye/logs:/var/logs/celery
+    restart: always
+    ports:
+      - 8000:8000
+
+
+  redis:
+    image: redis:latest
+    container_name: redis_the_eye
+    ports:
+      - '6379:6379'

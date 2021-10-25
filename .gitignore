@@ -1,4 +1,7 @@
 *.pyc
-**/.idea
+*.log
+*.clog
+**/.clog
 venv/
+
 

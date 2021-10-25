@@ -6,6 +6,7 @@ from event.serializers import EventSerializer
 class EventView(generics.ListCreateAPIView):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
+    ordering = ['-timestamp']
 
 
 class EventRudView(generics.RetrieveUpdateDestroyAPIView):

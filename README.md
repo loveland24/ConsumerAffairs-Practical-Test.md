@@ -1,6 +1,10 @@
 # ConsumerAffairs-Practical-Test.md
 
-## Application will be provided an API Key in order to be authenticated (trusted)<br>
+## To run project, run `docker-compose up` in root directory
+## or alternatively create a virtual env and `pip install`, then run `python manage.py runserver`
+
+
+### Application will be provided an API Key in order to be authenticated (trusted)<br>
 - can be created via POST: /user/ by an authenticated user
 - or via `python manage.py createsuperuser`
 - if created via console, a token will need to be generated via <br> 
@@ -16,13 +20,13 @@ print(token.key)
 ### Application can either submit a new session id with an event, or create one via:
 - POST: /session/
 
-#Endpoints
+## Endpoints
 - /event/ (list all events)
 - /event/[INT]/ (list event by ID)
 - /session/ (list all sessions)
 - /session/[STR]/ (list session by ID)
 
-##Filtering
+## Filtering
 ## Event:
 - session (ie. /event/?session=e2085be5-9137-4e4e-80b5-f1ffddc25423)
 - category (ie. /event/?category=page%20interaction)
